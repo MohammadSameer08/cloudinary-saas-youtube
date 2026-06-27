@@ -12,12 +12,7 @@ const isPublicApiRoute = createRouteMatcher(["/api/videos"]);
 export default clerkMiddleware(async (auth, req) => {
   const { userId } = await auth();
   const currentUrl = new URL(req.url);
-  const isAccessingDashboard = currentUrl.pathname === "/home";
   const isApiRequest = currentUrl.pathname.startsWith("/api");
-
-  if (userId && isPublicRoute(req) && isAccessingDashboard) {
-    return NextResponse.redirect(new URL("/home", req.url));
-  }
 
   if (!userId) {
     if (!isPublicRoute(req) && !isPublicApiRoute(req)) {
