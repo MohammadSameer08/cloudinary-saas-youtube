@@ -19,8 +19,12 @@ model Video {
   publicId String
   originalSize String
   compressedSize String?
-  duration String
+  duration Float
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
 
+// to create the database and run migrations, use the following command:
+// npx prisma migrate dev --name any-name-you-want
+// to generate the prisma client, use the following command:
+// npx prisma generate
