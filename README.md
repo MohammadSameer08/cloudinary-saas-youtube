@@ -2,6 +2,8 @@
 
 A modern full-stack web application for uploading, managing, and sharing videos and social media content with Cloudinary integration, built with Next.js 16 and TypeScript.
 
+### Live Domain : https://cloudinary-saas-youtube.vercel.app/home
+
 ## 🚀 Quick Links
 
 - [Setup & Installation](./docs/SETUP.md)
